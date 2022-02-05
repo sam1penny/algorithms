@@ -27,6 +27,6 @@ public class SortTesting {
         System.out.println("------------------New Test------------------");
         System.out.println(String.format("Test statistics: length = %d, minimum int = %d, maximum int = %d", size, min, max));
         System.out.println("Test result: " + (verify(a) ? "passed!" : "failed!"));
-        System.out.println(String.format("ElapsedTime: %d ms", elapsedTime / 1000));
+        System.out.println(String.format("ElapsedTime: %f ms", (double) elapsedTime / 1000000));
     }
 }
