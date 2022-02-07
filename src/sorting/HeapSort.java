@@ -2,16 +2,16 @@ package sorting;
 
 public class HeapSort implements SortingAlgo {
     public static void main(String[] args) {
-        SortTesting.test(new QuickSort());
+        SortTesting.test(new HeapSort());
     }
 
     public void sort(int[] a) {
         for (int k = a.length / 2 - 1; k >= 0; k--) {
             heapify(a, a.length, k);
         }
-
+        int temp;
         for (int k = a.length; k > 1; k--) {
-            int temp = a[0];
+            temp = a[0];
             a[0] = a[k - 1];
             a[k - 1] = temp;
             heapify(a, k - 1, 0);

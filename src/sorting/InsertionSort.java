@@ -1,7 +1,5 @@
 package sorting;
 
-import java.util.Arrays;
-
 public class InsertionSort implements SortingAlgo{
     public static void main(String[] args) {
         SortTesting.test(new InsertionSort());
