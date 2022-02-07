@@ -1,47 +1,39 @@
 package utils;
 
-public class Tree implements Comparable<Tree> {
-    private String symbol;
-    private int freq;
-    private Tree left;
-    private Tree right;
-    public Tree(String symb, int f) {
-        symbol = symb;
-        freq = f;
+public class Tree<T extends Comparable<T>> implements Comparable<Tree<T>> {
+    private T value;
+    private Tree<T> left;
+    private Tree<T> right;
+    public Tree(T v) {
+        value = v;
         left = null;
         right = null;
     }
 
-    public Tree(int f, Tree l, Tree r) {
-        freq = f;
+    public Tree(T v, Tree<T> l, Tree<T> r) {
+        value = v;
         left = l;
         right = r;
     }
 
-    public String getSymbol() {
-        return symbol;
-    }
+    public T getValue(){return value;}
 
-    public int getFreq() {
-        return freq;
-    }
-
-    public Tree getLeft() {
+    public Tree<T> getLeft() {
         return left;
     }
 
-    public Tree getRight() {
+    public Tree<T> getRight() {
         return right;
     }
 
     @Override
     public int compareTo(Tree o) {
-        return o == null ? 1 : freq - o.freq;
+        return o == null ? 1 : value.compareTo((T) o.value);
     }
 
     @Override
     public String toString() {
-        return symbol + "|" + freq;
+        return value.toString();
     }
 
 }
