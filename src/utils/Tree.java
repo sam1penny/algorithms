@@ -1,6 +1,6 @@
 package utils;
 
-public class Tree<T extends Comparable<T>> implements Comparable<Tree<T>> {
+public class Tree<T extends Comparable<T>> implements Comparable<Tree<T>>, PrintableNode {
     private T value;
     private Tree<T> left;
     private Tree<T> right;
@@ -17,6 +17,11 @@ public class Tree<T extends Comparable<T>> implements Comparable<Tree<T>> {
     }
 
     public T getValue(){return value;}
+
+    @Override
+    public String getText() {
+        return toString();
+    }
 
     public Tree<T> getLeft() {
         return left;

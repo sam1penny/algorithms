@@ -5,12 +5,12 @@ import java.util.List;
 
 public class TreePrinter
 {
-    public static <T extends Comparable<T>> void print(Tree<T> root)
+    public static <T extends PrintableNode> void print(T root)
     {
         List<List<String>> lines = new ArrayList<List<String>>();
 
-        List<Tree<T>> level = new ArrayList<Tree<T>>();
-        List<Tree<T>> next = new ArrayList<Tree<T>>();
+        List<PrintableNode> level = new ArrayList<PrintableNode>();
+        List<PrintableNode> next = new ArrayList<PrintableNode>();
 
         level.add(root);
         int nn = 1;
@@ -22,14 +22,14 @@ public class TreePrinter
 
             nn = 0;
 
-            for (Tree<T> n : level) {
+            for (PrintableNode n : level) {
                 if (n == null) {
                     line.add(null);
 
                     next.add(null);
                     next.add(null);
                 } else {
-                    String aa = n.toString();
+                    String aa = n.getText();
                     line.add(aa);
                     if (aa.length() > widest) widest = aa.length();
 
@@ -45,7 +45,7 @@ public class TreePrinter
 
             lines.add(line);
 
-            List<Tree<T>> tmp = level;
+            List<PrintableNode> tmp = level;
             level = next;
             next = tmp;
             next.clear();
