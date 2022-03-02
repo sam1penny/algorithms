@@ -1,8 +1,6 @@
 package dynamic_programming;
 
 
-import java.util.Arrays;
-
 public class LongestCommonSubsequence {
     public static void main(String[] args) {
         String word1 = "amputation";
