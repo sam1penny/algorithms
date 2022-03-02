@@ -30,12 +30,12 @@ public class Node<K, V> implements PrintableNode {
     }
 
     @Override
-    public PrintableNode getLeft() {
+    public Node<K, V> getLeft() {
         return left;
     }
 
     @Override
-    public PrintableNode getRight() {
+    public Node<K, V> getRight() {
         return right;
     }
 }

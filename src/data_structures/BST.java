@@ -199,12 +199,11 @@ public class BST<K extends Comparable<K>, V>{
         BST<Integer, Integer> t = new BST<>();
         t.insert(new Node<>(5, 3));
         t.insert(new Node<>(2, 3));
-        t.insert(new Node<>(3, 3));
+        t.insert(new Node<>(9, 6));
+        t.insert(new Node<>(10, 6));
         t.insert(new Node<>(7, 6));
-        t.insert(new Node<>(4, 3));
-        t.insert(new Node<>(1, 3));
-        t.insert(new Node<>(8, 3));
-        t.insert(new Node<>(6, 3));
+        t.insert(new Node<>(8, 6));
+
 
         System.out.println("Max " + t.max());
         System.out.println("Min " + t.min());
@@ -222,9 +221,9 @@ public class BST<K extends Comparable<K>, V>{
             System.out.println(t.search(k));
         }
         TreePrinter.print(t.getRoot());
-        t.delete(5);
+        t.delete(9);
         TreePrinter.print(t.getRoot());
-        t.delete(2);
+        t.delete(5);
         TreePrinter.print(t.getRoot());
     }
 
