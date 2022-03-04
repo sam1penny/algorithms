@@ -3,7 +3,7 @@ package sorting;
 import java.util.Random;
 
 
-public class SortTesting {
+public class SortingStatistics {
 
     private static final int size = 10000;
     private static final int min = 0;

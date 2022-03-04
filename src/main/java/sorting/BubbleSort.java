@@ -2,7 +2,7 @@ package sorting;
 
 public class BubbleSort implements SortingAlgo{
     public static void main(String[] args) {
-        SortTesting.test(new BubbleSort());
+        SortingStatistics.test(new BubbleSort());
     }
     @Override
     public void sort(int[] array) {

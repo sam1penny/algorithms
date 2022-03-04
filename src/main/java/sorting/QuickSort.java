@@ -2,7 +2,7 @@ package sorting;
 
 public class QuickSort implements SortingAlgo{
     public static void main(String[] args) {
-        SortTesting.test(new QuickSort());
+        SortingStatistics.test(new QuickSort());
     }
 
     public static void quicksortSubArray(int[] a, int iBegin, int iEnd) {

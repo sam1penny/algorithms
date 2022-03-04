@@ -4,7 +4,7 @@ import java.util.Arrays;
 
 public class RadixSort implements SortingAlgo {
     public static void main(String[] args) {
-        SortTesting.test(new RadixSort());
+        SortingStatistics.test(new RadixSort());
     }
 
     @Override

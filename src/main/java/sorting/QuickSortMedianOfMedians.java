@@ -4,7 +4,7 @@ import java.util.Arrays;
 
 public class QuickSortMedianOfMedians implements SortingAlgo{
     public static void main(String[] args) {
-        SortTesting.test(new QuickSortMedianOfMedians());
+        SortingStatistics.test(new QuickSortMedianOfMedians());
     }
 
     public static int select(int[] array, int low, int high, int k) {

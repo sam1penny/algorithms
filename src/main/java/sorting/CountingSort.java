@@ -2,7 +2,7 @@ package sorting;
 
 public class CountingSort implements SortingAlgo {
     public static void main(String[] args) {
-        SortTesting.test(new CountingSort());
+        SortingStatistics.test(new CountingSort());
     }
 
     @Override

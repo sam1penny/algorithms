@@ -2,7 +2,7 @@ package sorting;
 
 public class HeapSort implements SortingAlgo {
     public static void main(String[] args) {
-        SortTesting.test(new HeapSort());
+        SortingStatistics.test(new HeapSort());
     }
 
     public void sort(int[] a) {
